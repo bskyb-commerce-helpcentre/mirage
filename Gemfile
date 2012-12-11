@@ -6,7 +6,6 @@ gem "waitforit"
 gem "thor"
 gem "ptools"
 gem "thin"
-gem "heroku"
 
 
 group :test do
