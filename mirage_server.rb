@@ -8,9 +8,17 @@ require 'extensions/object'
 require 'extensions/hash'
 require 'app'
 require 'mirage/client'
+require 'rack/cors'
 
 module Mirage
   class Server < Sinatra::Base
+    use Rack::Cors do
+      allow do
+        origins '*'
+        resource '/*', headers: :any, methods: [:get, :put, :post, :delete]
+      end
+    end
+
     configure do
       options = Hash[*ARGV]
       set :defaults, options["defaults"]

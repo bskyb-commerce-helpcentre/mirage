@@ -6,6 +6,7 @@ gem "waitforit"
 gem "thor"
 gem "ptools"
 gem "thin"
+gem 'rack-cors'
 
 
 group :test do
